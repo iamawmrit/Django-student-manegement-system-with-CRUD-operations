@@ -14,6 +14,3 @@ media/
 .DS_Store
 db.sqlite3
 media/
-
-*/migrations/*
-!*/migrations/__init__.py
