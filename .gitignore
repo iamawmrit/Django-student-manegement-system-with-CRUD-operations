@@ -3,6 +3,6 @@
 .DS_Store
 db.sqlite3
 media/
-venv/
+.venv/
 */migrations/*
 !*/migrations/__init__.py
