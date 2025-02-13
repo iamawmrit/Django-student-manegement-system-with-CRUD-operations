@@ -4,7 +4,7 @@
   <h3 class="text-center m-4">Update Student</h3>
   {% if success %}
     <div class="alert alert-success" role="alert">
-      The student updated successfully.
+      The student was updated successfully.
       <a href="{% url 'index' %}" class="alert-link">Go to Home Page.</a>
     </div>
   {% else %}
@@ -17,7 +17,26 @@
           <div class="card-body">
             <form action="" method="POST">
               {% csrf_token %}
-              {{ form.as_p }}
+              
+              <!-- Render all fields -->
+              {{ form.student_number.label_tag }} {{ form.student_number }}<br>
+              <span class="text-danger">{{ form.student_number.errors }}</span>  <!-- Display errors for student_number -->
+              
+              {{ form.first_name.label_tag }} {{ form.first_name }}<br>
+              <span class="text-danger">{{ form.first_name.errors }}</span>  <!-- Display errors for first_name -->
+
+              {{ form.last_name.label_tag }} {{ form.last_name }}<br>
+              <span class="text-danger">{{ form.last_name.errors }}</span>  <!-- Display errors for last_name -->
+
+              {{ form.email.label_tag }} {{ form.email }}<br>
+              <span class="text-danger">{{ form.email.errors }}</span>  <!-- Display errors for email -->
+
+              {{ form.field_of_study.label_tag }} {{ form.field_of_study }}<br>
+              <span class="text-danger">{{ form.field_of_study.errors }}</span>  <!-- Display errors for field_of_study -->
+
+              {{ form.gpa.label_tag }} {{ form.gpa }}<br>
+              <span class="text-danger">{{ form.gpa.errors }}</span>  <!-- Display errors for GPA -->
+              
               <button type="submit" class="btn btn-success">Update</button>
               <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
             </form>

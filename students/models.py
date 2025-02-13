@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 # Create your models here.
@@ -7,7 +8,12 @@ class Student(models.Model):
   last_name = models.CharField(max_length=50)
   email = models.EmailField(max_length=100)
   field_of_study = models.CharField(max_length=50)
-  gpa = models.FloatField()
+  gpa = models.FloatField(
+        validators=[
+            MaxValueValidator(4.0),   # Ensure GPA does not exceed 4.0
+            MinValueValidator(0.0)     # Optionally, ensure GPA is not less than 0.0
+        ]
+    )
 
   def __str__(self):
     return f'Student: {self.first_name} {self.last_name}'
