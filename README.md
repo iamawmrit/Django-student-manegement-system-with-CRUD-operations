@@ -2,7 +2,7 @@
 
 This is a student management system built using **Django 4**, **HTML 5**, **CSS 3**, and **Bootstrap 5**.
 
-<img width="964" alt="ScreenShots of the system" src="https://github.com/iamawmrit/student-manegement-system-with-CRUD-operations/blob/master/assets/sc1.png">
+<img width="964" alt="ScreenShots of the system" src="https://github.com/iamawmrit/student-manegement-system-with-CRUD-operations/blob/master/assets/sc.png">
 
 ## Table of Contents 
 - [Prerequisites](#prerequisites)
